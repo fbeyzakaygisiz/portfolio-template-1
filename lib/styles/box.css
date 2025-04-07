@@ -1,0 +1,442 @@
+:root {
+    --bw-default: 1px;
+
+    --br-none : 0px;
+    --br-xs: 2px;
+    --br-sm: 4px;
+    --br-md: 8px;
+    --br-lg: 16px;
+    --br-xl: 24px;
+    --br-xxl: 36px;
+  
+    --br-round: 50%;
+    --br-pill: 5000px;
+    --br-square: 0px;
+
+    --border-default: var(--bw-default) solid var(--background-separator);
+    --border-separator: var(--bw-default) solid var(--background-separator);
+}
+
+.border-separator {
+    border: var(--border-separator);
+  }
+.border-b-separator {
+  border-bottom: var(--border-separator);
+}
+.border-r-separator {
+  border-right: var(--border-separator);
+}
+.border-l-separator {
+  border-left: var(--border-separator);
+}
+.border-t-separator {
+  border-top: var(--border-separator);
+}
+  
+
+
+
+/* Solid Primary */
+.box-solid-primary {
+  @apply bg-primary-default text-primary-on-default border-transparent;
+}
+
+.box-solid-primary:hover {
+  @apply bg-primary-hover text-primary-on-hover;
+}
+
+.box-solid-primary:focus {
+  @apply bg-primary-focus text-primary-on-focus;
+}
+
+.box-solid-primary:disabled,
+.box-solid-primary.disabled {
+  @apply bg-primary-disabled text-primary-on-disabled;
+}
+
+/* Solid Secondary */
+.box-solid-secondary {
+  @apply bg-secondary-default text-secondary-on-default border-transparent;
+}
+
+.box-solid-secondary:hover {
+  @apply bg-secondary-hover text-secondary-on-hover;
+}
+
+.box-solid-secondary:focus {
+  @apply bg-secondary-focus text-secondary-on-focus;
+}
+
+.box-solid-secondary:disabled,
+.box-solid-secondary.disabled {
+  @apply bg-secondary-disabled text-secondary-on-disabled;
+}
+
+/* Solid Success */
+.box-solid-success {
+  @apply bg-success-default text-success-on-default border-transparent;
+}
+
+.box-solid-success:hover {
+  @apply bg-success-hover text-success-on-hover;
+}
+
+.box-solid-success:focus {
+  @apply bg-success-focus text-success-on-focus;
+}
+
+.box-solid-success:disabled,
+.box-solid-success.disabled {
+  @apply bg-success-disabled text-success-on-disabled;
+}
+
+/* Solid Danger */
+.box-solid-danger {
+  @apply bg-danger-default text-danger-on-default border-transparent;
+}
+
+.box-solid-danger:hover {
+  @apply bg-danger-hover text-danger-on-hover;
+}
+
+.box-solid-danger:focus {
+  @apply bg-danger-focus text-danger-on-focus;
+}
+
+.box-solid-danger:disabled,
+.box-solid-danger.disabled {
+  @apply bg-danger-disabled text-danger-on-disabled;
+}
+
+
+
+/* Solid Neutral */
+.box-solid-neutral {
+  @apply bg-neutral-default text-neutral-on-default border-transparent;
+}
+
+.box-solid-neutral:hover {
+  @apply bg-neutral-hover text-neutral-on-hover;
+}
+
+.box-solid-neutral:focus {
+  @apply bg-neutral-focus text-neutral-on-focus;
+}
+
+.box-solid-neutral:disabled,
+.box-solid-neutral.disabled {
+  @apply bg-neutral-disabled text-neutral-on-disabled;
+}
+
+
+/* Ghost Button Classes */
+.box-ghost-primary {
+  @apply bg-primary-default-variant text-primary-on-default-variant border-none;
+}
+
+.box-ghost-primary:hover {
+  @apply bg-primary-hover-variant text-primary-on-hover-variant;
+}
+
+.box-ghost-primary:focus {
+  @apply bg-primary-focus-variant text-primary-on-focus-variant;
+}
+
+.box-ghost-primary:disabled,
+.box-ghost-primary.disabled {
+  @apply bg-primary-disabled-variant text-primary-on-disabled-variant;
+}
+
+.box-ghost-secondary {
+  @apply bg-secondary-default-variant text-secondary-on-default-variant border-none;
+}
+
+.box-ghost-secondary:hover {
+  @apply bg-secondary-hover-variant text-secondary-on-hover-variant;
+}
+
+.box-ghost-secondary:focus {
+  @apply bg-secondary-focus-variant text-secondary-on-focus-variant;
+}
+
+.box-ghost-secondary:disabled,
+.box-ghost-secondary.disabled {
+  @apply bg-secondary-disabled-variant text-secondary-on-disabled-variant;
+}
+
+
+.box-ghost-success {
+  @apply bg-success-default-variant text-success-on-default-variant border-none;
+}
+
+.box-ghost-success:hover {
+  @apply bg-success-hover-variant text-success-on-hover-variant;
+}
+
+.box-ghost-success:focus {
+  @apply bg-success-focus-variant text-success-on-focus-variant;
+}
+
+.box-ghost-success:disabled,
+.box-ghost-success.disabled {
+  @apply bg-success-disabled-variant text-success-on-disabled-variant;
+}
+
+
+.box-ghost-danger {
+  @apply bg-danger-default-variant text-danger-on-default-variant border-none;
+}
+
+.box-ghost-danger:hover {
+  @apply bg-danger-hover-variant text-danger-on-hover-variant;
+}
+
+.box-ghost-danger:focus {
+  @apply bg-danger-focus-variant text-danger-on-focus-variant;
+}
+
+.box-ghost-danger:disabled,
+.box-ghost-danger.disabled {
+  @apply bg-danger-disabled-variant text-danger-on-disabled-variant;
+}
+
+.box-ghost-warning {
+  @apply bg-warning-default-variant text-warning-on-default-variant border-none;
+}
+
+.box-ghost-warning:hover {
+  @apply bg-warning-hover-variant text-warning-on-hover-variant;
+}
+
+.box-ghost-warning:focus {
+  @apply bg-warning-focus-variant text-warning-on-focus-variant;
+}
+
+.box-ghost-warning:disabled,
+.box-ghost-warning.disabled {
+  @apply bg-warning-disabled-variant text-warning-on-disabled-variant;
+}
+
+.box-ghost-neutral {
+  @apply bg-neutral-default-variant text-neutral-on-default-variant border-none;
+}
+
+.box-ghost-neutral:hover {
+  @apply bg-neutral-hover-variant text-neutral-on-hover-variant;
+}
+
+.box-ghost-neutral:focus {
+  @apply bg-neutral-focus-variant text-neutral-on-focus-variant;
+}
+
+.box-ghost-neutral:disabled,
+.box-ghost-neutral.disabled {
+  @apply bg-neutral-disabled-variant text-neutral-on-disabled-variant;
+}
+
+
+
+/* Outlined Button Classes */
+.box-outlined-primary {
+  @apply bg-transparent border border-primary-default text-primary-on-default-variant;
+}
+
+.box-outlined-primary:hover {
+  @apply border-primary-hover text-primary-on-hover-variant;
+}
+
+.box-outlined-primary:focus {
+  @apply border-primary-focus text-primary-on-focus-variant;
+}
+
+.box-outlined-primary:disabled,
+.box-outlined-primary.disabled {
+  @apply border-current text-primary-on-disabled-variant;
+}
+
+.box-outlined-secondary {
+  @apply bg-transparent border border-secondary-default text-secondary-on-default-variant;
+}
+
+.box-outlined-secondary:hover {
+  @apply border-secondary-hover text-secondary-on-hover-variant;
+}
+
+.box-outlined-secondary:focus {
+  @apply border-secondary-focus text-secondary-on-focus-variant;
+}
+
+.box-outlined-secondary:disabled,
+.box-outlined-secondary.disabled {
+  @apply border-current text-secondary-on-disabled-variant;
+}
+
+.box-outlined-success {
+  @apply bg-transparent border border-success-default text-success-on-default-variant;
+}
+
+.box-outlined-success:hover {
+  @apply border-success-hover text-success-on-hover-variant;
+}
+
+.box-outlined-success:focus {
+  @apply border-success-focus text-success-on-focus-variant;
+}
+
+.box-outlined-success:disabled,
+.box-outlined-success.disabled {
+  @apply border-current text-success-on-disabled-variant;
+}
+
+.box-outlined-danger {
+  @apply bg-transparent border border-danger-default text-danger-on-default-variant;
+}
+
+.box-outlined-danger:hover {
+  @apply border-danger-hover text-danger-on-hover-variant;
+}
+
+.box-outlined-danger:focus {
+  @apply border-danger-focus text-danger-on-focus-variant;
+}
+
+.box-outlined-danger:disabled,
+.box-outlined-danger.disabled {
+  @apply border-current text-danger-on-disabled-variant;
+}
+
+.box-outlined-warning {
+  @apply bg-transparent border border-warning-default text-warning-on-default-variant;
+}
+
+.box-outlined-warning:hover {
+  @apply border-warning-hover text-warning-on-hover-variant;
+}
+
+.box-outlined-warning:focus {
+  @apply border-warning-focus text-warning-on-focus-variant;
+}
+
+.box-outlined-warning:disabled,
+.box-outlined-warning.disabled {
+  @apply border-current text-warning-on-disabled-variant;
+}
+
+.box-outlined-neutral {
+  @apply bg-transparent border border-neutral-default text-neutral-on-default-variant;
+}
+
+.box-outlined-neutral:hover {
+  @apply border-neutral-hover text-neutral-on-hover-variant;
+}
+
+.box-outlined-neutral:focus {
+  @apply border-neutral-focus text-neutral-on-focus-variant;
+}
+
+.box-outlined-neutral:disabled,
+.box-outlined-neutral.disabled {
+  @apply border-current text-neutral-on-disabled-variant;
+}
+/* Link Button Classes */
+.box-link-primary {
+  @apply bg-transparent border-0 text-primary-on-default-variant;
+}
+
+.box-link-primary:hover {
+  @apply text-primary-on-hover-variant;
+}
+
+.box-link-primary:focus {
+  @apply text-primary-on-focus-variant;
+}
+
+.box-link-primary:disabled,
+.box-link-primary.disabled {
+  @apply text-primary-on-disabled-variant;
+}
+
+.box-link-secondary {
+  @apply bg-transparent border-0 text-secondary-on-default-variant;
+}
+
+.box-link-secondary:hover {
+  @apply text-secondary-on-hover-variant;
+}
+
+.box-link-secondary:focus {
+  @apply text-secondary-on-focus-variant;
+}
+
+.box-link-secondary:disabled,
+.box-link-secondary.disabled {
+  @apply text-secondary-on-disabled-variant;
+}
+
+.box-link-success {
+  @apply bg-transparent border-0 text-success-on-default-variant;
+}
+
+.box-link-success:hover {
+  @apply text-success-on-hover-variant;
+}
+
+.box-link-success:focus {
+  @apply text-success-on-focus-variant;
+}
+
+.box-link-success:disabled,
+.box-link-success.disabled {
+  @apply text-success-on-disabled-variant;
+}
+
+.box-link-danger {
+  @apply bg-transparent border-0 text-danger-on-default-variant;
+}
+
+.box-link-danger:hover {
+  @apply text-danger-on-hover-variant;
+}
+
+.box-link-danger:focus {
+  @apply text-danger-on-focus-variant;
+}
+
+.box-link-danger:disabled,
+.box-link-danger.disabled {
+  @apply text-danger-on-disabled-variant;
+}
+
+.box-link-warning {
+  @apply bg-transparent border-0 text-warning-on-default-variant;
+}
+
+.box-link-warning:hover {
+  @apply text-warning-on-hover-variant;
+}
+
+.box-link-warning:focus {
+  @apply text-warning-on-focus-variant;
+}
+
+.box-link-warning:disabled,
+.box-link-warning.disabled {
+  @apply text-warning-on-disabled-variant;
+}
+
+.box-link-neutral {
+  @apply bg-transparent border-0 text-neutral-on-default-variant;
+}
+
+.box-link-neutral:hover {
+  @apply text-neutral-on-hover-variant;
+}
+
+.box-link-neutral:focus {
+  @apply text-neutral-on-focus-variant;
+}
+
+.box-link-neutral:disabled,
+.box-link-neutral.disabled {
+  @apply text-neutral-on-disabled-variant;
+}

@@ -1,0 +1,97 @@
+@import "../lib/styles/main.css";
+@import "./color.css";
+
+@font-face {
+    font-family: 'Angle';
+    src: url('./assets/fonts/Angle.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+@font-face {
+    font-family: 'Anthemia';
+    src: url('./assets/fonts/AnthemiaRegular.ttf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Vignettes';
+    src: url('./assets/fonts/VignettesIkiikocom-7BRzE.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+@font-face {
+    font-family: 'Ballein';
+    src: url('./assets/fonts/Ballein-ovwdd.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Polluxie';
+    src: url('./assets/fonts/Poluxxie.otf') format('opentype');
+  }
+  @font-face {
+    font-family: 'Carla';
+    src: url('./assets/fonts/CarlaSans%20Bold.otf');
+    font-weight: 900;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Lunery';
+    src: url('./assets/fonts/LUNERY.otf');
+    font-weight: 400;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Rosemarine';
+    src: url('./assets/fonts/Rosemarine Regular.otf');
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Darine';
+    src: url('./assets/fonts/darine.otf');
+    font-weight: 400;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Joland Colline';
+    src: url('./assets/fonts/joland-colline.otf');
+    font-weight: 400;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Fiona';
+    src: url('./assets/fonts/Fiona-Regular.otf');
+    font-weight: 400;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Simplicite';
+    src: url('./assets/fonts/HV\ Simplicite\ Demo.otf');
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+:root{
+    --font-display: "Joland Colline", serif;
+    --font-primary: "Playfair Display", sans-serif;
+    --font-secondary: "Jura", sans-serif;
+}
+
+
+
+#root{
+    width: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--background-primary);
+}
+
+
+  

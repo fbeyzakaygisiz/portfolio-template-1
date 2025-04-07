@@ -1,0 +1,14 @@
+:root{
+    --swatches-primary: #C9E9D8;
+    /* Primary Shades */
+    --primary-50: #F3F9F4;  /* Very light pastel */
+    --primary-100: #D9F1D8; /* Light pastel */
+    --primary-200: #BFE8C2; /* Soft pastel green */
+    --primary-300: #C9E9D8; /* Light muted pastel green */
+    --primary-400: #aed5c0; /* Base honeydew color */
+    --primary-500: #8CC3B0; /* Muted pastel green */
+    --primary-600: #6F9F91; /* Medium muted green */
+    --primary-700: #4F7C73; /* Darker muted green */
+    --primary-800: #3A5C56; /* Dark green */
+    --primary-900: #252A29; /* Very dark green (your specified 900) */
+}

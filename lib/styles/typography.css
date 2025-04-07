@@ -1,0 +1,161 @@
+
+
+:root {
+  --font-primary: "Montserrat", serif;
+  --font-secondary: "Inter", serif;
+  --font-display: "Abril Fatface", serif;
+
+  --fs-display: 3rem;
+  --fs-h1: 2rem;
+  --fs-h2: 1.75rem;
+  --fs-h3: 1.5rem;
+  --fs-h4: 1.35rem;
+  --fs-h5: 1.2rem;
+
+  --fs-p-lg: 1.2rem;
+  --fs-p-md: 1rem;
+  --fs-p-sm: 0.8rem;
+  --fs-p-xs: 0.5rem;
+
+  --fs-label-lg: 1.2rem;
+  --fs-label-md: 1rem;
+  --fs-label-sm: 0.8rem;
+
+  --lh-display: 3.5rem;
+  --lh-h1: 2.75rem;
+  --lh-h2: 2.25rem;
+  --lh-h3: 2rem;
+  --lh-h4: 1.875rem;
+  --lh-h5: 1.75rem;
+
+  --lh-p-lg: 1.875rem;
+  --lh-p-md: 1.625rem;
+  --lh-p-sm: 1.25rem;
+  --lh-p-xs: 1rem;
+
+  --lh-label-lg: 1.375rem;
+  --lh-label-md: 1.25rem;
+  --lh-label-sm: 1.125rem;
+}
+
+body {
+  font-size: var(--fs-p-md);
+  font-family: var(--font-primary);
+}
+
+.display {
+  font-size: var(--fs-display);
+  font-weight: 400;
+  font-family: var(--font-display);
+  line-height: var(--lh-display);
+}
+
+h1, .text-h1 {
+  font-size: var(--fs-h1);
+  font-weight: 700;
+  line-height: var(--lh-h1);
+  font-family: var(--font-primary);
+
+}
+
+h2, .text-h2 {
+  font-size: var(--fs-h2);
+  font-weight: 700;
+  line-height: var(--lh-h2);
+  font-family: var(--font-primary);
+
+}
+
+h3, .text-h3 {
+  font-size: var(--fs-h3);
+  font-weight: 700;
+  line-height: var(--lh-h3);
+  font-family: var(--font-primary);
+
+}
+
+h4, .text-h4 {
+  font-size: var(--fs-h4);
+  font-weight: 600;
+  line-height: var(--lh-h4);
+  font-family: var(--font-primary);
+
+}
+
+h5, .text-h5 {
+  font-size: var(--fs-h5);
+  font-weight: 600;
+  line-height: var(--lh-h5);
+  font-family: var(--font-primary);
+
+}
+
+.text-p-lg {
+  font-size: var(--fs-p-lg);
+  font-weight: 400;
+  line-height: var(--lh-p-lg);
+  font-family: var(--font-secondary);
+
+}
+
+.text-p-md, p {
+  font-size: var(--fs-p-md);
+  font-weight: 400;
+  line-height: var(--lh-p-md);
+  font-family: var(--font-secondary);
+
+}
+
+.text-p-sm {
+  font-size: var(--fs-p-sm);
+  font-weight: 400;
+  line-height: var(--lh-p-sm);
+  font-family: var(--font-secondary);
+
+}
+
+.text-p-xs {
+  font-size: var(--fs-p-xs);
+  font-weight: 400;
+  line-height: var(--lh-p-xs);
+  font-family: var(--font-secondary);
+
+}
+
+.label-lg {
+  font-size: var(--fs-label-lg);
+  font-weight: 600;
+  line-height: var(--lh-label-lg);
+  text-transform: capitalize;
+  font-family: var(--font-secondary);
+
+}
+
+.label-md , label {
+  font-size: var(--fs-label-md);
+  font-weight: 600;
+  line-height: var(--lh-label-md);
+  text-transform: capitalize;
+  font-family: var(--font-secondary);
+
+}
+
+.label-sm {
+  font-size: var(--fs-label-sm);
+  font-weight: 600;
+  line-height: var(--lh-label-sm);
+  text-transform: capitalize;
+  font-family: var(--font-secondary);
+
+}
+
+
+.font-display {
+  font-family: var(--font-display);
+}
+.font-primary {
+  font-family: var(--font-primary);
+}
+.font-secondary {
+  font-family: var(--font-secondary);
+}

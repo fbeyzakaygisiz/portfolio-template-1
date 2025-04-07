@@ -1,0 +1,28 @@
+:root{
+    --input-h-xl:56px;
+    --input-h-lg:48px;
+    --input-h-md:40px;
+    --input-h-sm:32px;
+    --input-h-xs:24px;
+  
+    --input-p-xl: 12px 20px;
+    --input-p-lg: 10px 16px;
+    --input-p-md: 8px 12px;
+    --input-p-sm: 4px 8px;
+    --input-p-xs: 2px 6px;
+  
+    --input-fs-xl:20px;
+    --input-fs-lg:18px;
+    --input-fs-md:16px;
+    --input-fs-sm:12px;
+    --input-fs-xs:8px;
+  
+    --input-g-xl:8px;
+    --input-g-lg:4px;
+    --input-g-md:2px;
+    --input-g-sm:2px;
+    --input-g-xs:2px;
+  
+    --input-r-default: var(--br-default);
+    --input-bw-default: var(--bw-default);
+}

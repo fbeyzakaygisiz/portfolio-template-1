@@ -1,0 +1,26 @@
+
+@import "./resets.css";
+@import "./colors.css";
+@import "./typography.css";
+@import "./layout.css";
+@import "./box.css";
+@import "./effects.css";
+@import "./components.css";
+@import "./tailwind.css";
+@import "./clippaths.css";
+
+body {
+
+    background-color: var(--background-primary);
+    color: var(--text-primary);
+    font-family: var(--font-primary, "Montserrat"), serif;
+  
+    width: 100vw;
+    height: 100dvh;
+    overflow-y: scroll;
+}
+
+input , span, a , textarea, div{
+    font-family: var(--font-secondary);
+
+}
