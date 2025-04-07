@@ -2,12 +2,10 @@ import { ReactNode, useRef } from "react"
 import styled from "styled-components"
 import { useGSAP } from '@gsap/react'
 import gsap from "gsap"
-import { SplitText } from "gsap-trial/SplitText"
 import { ScrollTrigger } from 'gsap/all'
 
+import SplitType from 'split-type'
 
-
-gsap.registerPlugin(SplitText)
 gsap.registerPlugin(ScrollTrigger)
 
 interface IRevealText {
@@ -40,8 +38,8 @@ const RevealText = ({
     useGSAP(()=> {
 
         if(!ref.current) return;
-        const split =  new SplitText(ref.current, { type: "words, chars" });
-        
+        const split = new SplitType( ref.current, { types: 'words,chars' })
+
         gsap.from(split.chars , {
             y: 64,
             opacity:0,
