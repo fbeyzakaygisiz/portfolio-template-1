@@ -34,7 +34,7 @@ const CVSection = ({ title, items }: Props) => {
   const ref = useRef<HTMLHeadingElement>(null);
 
   const [details, setDetails] = useState<string | null>(null);
-  const [timeoutId, setTimeoutId] = useState<NodeJS.Timeout | null>(null);
+  const [timeoutId, setTimeoutId] = useState<ReturnType<typeof setTimeout> | null>(null);
 
   useOutsideClick(containerRef, () => setDetails(null));
 
