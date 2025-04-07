@@ -34,6 +34,7 @@ const CVSection = ({ title, items }: Props) => {
   const ref = useRef<HTMLHeadingElement>(null);
 
   const [details, setDetails] = useState<string | null>(null);
+  const [timeoutId, setTimeoutId] = useState<NodeJS.Timeout | null>(null);
 
   useOutsideClick(containerRef, () => setDetails(null));
 
@@ -57,7 +58,7 @@ const CVSection = ({ title, items }: Props) => {
         ease: "power3.in",
       });
 
-      if(!self.selector) return;
+      if (!self.selector) return;
       // Animate only .cv-item children within this component
       tl.from(self?.selector(".cv-item"), {
         y: 80,
@@ -65,29 +66,50 @@ const CVSection = ({ title, items }: Props) => {
         duration: 0.8,
         stagger: 0.5,
         ease: "power3.in",
+        pointerEvents: "none"
       }, "+=0.2");
     }, containerRef);
 
     return () => ctx.revert(); // Cleanup on unmount
   }, []);
 
+  const handleMouseEnter = (itemDetails: string | undefined) => {
+    if (timeoutId) {
+      clearTimeout(timeoutId); // Clear any existing timeout
+    }
+
+    const newTimeoutId = setTimeout(() => {
+      setDetails(itemDetails || null);
+    }, 800); // 0.8 seconds delay
+
+    setTimeoutId(newTimeoutId);
+  };
+
+  const handleMouseLeave = (itemDetails: string | undefined) => {
+    if (timeoutId) {
+      clearTimeout(timeoutId); // Clear timeout when mouse leaves
+    }
+
+    if (details === itemDetails) setDetails(null);
+  };
+
   return (
     <Container ref={containerRef}>
-      <h5 className='text-text-tertiary' ref={ref}>{title}</h5>
-      <div className='ml-4 flex flex-col w-full'>
+      <h5 className="text-text-tertiary" ref={ref}>
+        {title}
+      </h5>
+      <div className="ml-4 flex flex-col w-full">
         {items?.map((item, i) => (
           <CVItem
             key={`cv-item-${i}`}
             className={`cv-item`}
             {...item}
-            onMouseEnter={() => setDetails(item?.details ? item.details : null)}
-            onMouseLeave={() => {
-              if (details === item?.details) setDetails(null);
-            }}
+            onMouseEnter={() => handleMouseEnter(item.details)}
+            onMouseLeave={() => handleMouseLeave(item.details)}
           />
         ))}
       </div>
-     { details &&  <CVDetailsBox isOpen={!!details}>{details}</CVDetailsBox>}
+      {details && <CVDetailsBox isOpen={!!details}>{details}</CVDetailsBox>}
     </Container>
   );
 };

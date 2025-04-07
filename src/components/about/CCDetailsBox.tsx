@@ -1,6 +1,6 @@
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
-import React, { useEffect, useRef } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import styled from 'styled-components'
 
 const Container = styled.div`
@@ -16,7 +16,6 @@ const Container = styled.div`
   line-height: 140%;
   z-index: 10;
   font-family: var(--font-secondary);
-
 
   opacity: 0;
   transform: scale(0.55);
@@ -35,6 +34,9 @@ type Props = {
 function CVDetailsBox({ isOpen, children }: Props) {
   const boxRef = useRef<HTMLDivElement>(null)
   const tlRef = useRef<gsap.core.Timeline | null>(null)
+
+  const [position, setPosition] = useState({ x: 0, y: 0 })
+  const [mounted, setMounted] = useState(false)
 
   // Create GSAP timeline once
   useGSAP(() => {
@@ -71,9 +73,25 @@ function CVDetailsBox({ isOpen, children }: Props) {
       }
     }
   }, [isOpen])
-  
-  // Smooth follow with GSAP
+
+  // Capture initial position of the cursor when the component first mounts
   useEffect(() => {
+    const getInitialPosition = () => {
+      const x = window.innerWidth / 2
+      const y = window.innerHeight / 2
+
+      setPosition({ x, y })
+    }
+
+    getInitialPosition()
+
+    setMounted(true)
+  }, [])
+
+  // Update box position based on cursor movement after initial mount
+  useEffect(() => {
+    if (!mounted) return // Wait until mounted before moving the box
+
     const box = boxRef.current
     if (!box) return
 
@@ -91,7 +109,19 @@ function CVDetailsBox({ isOpen, children }: Props) {
 
     window.addEventListener('mousemove', moveBox)
     return () => window.removeEventListener('mousemove', moveBox)
-  }, [])
+  }, [mounted])
+
+  // Set the initial position after the component mounts
+  useEffect(() => {
+    const box = boxRef.current
+    if (box && mounted && position.x !== 0 && position.y !== 0) {
+      gsap.to(box, {
+        x: position.x -40,
+        y: position.y -40,
+        duration: 0, // No animation for the initial position
+      })
+    }
+  }, [mounted, position])
 
   return (
     <Container ref={boxRef}>
