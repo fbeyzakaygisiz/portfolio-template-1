@@ -89,7 +89,7 @@ const CopyMailButton = forwardRef<HTMLDivElement, Props>(({
             </CopyButton>
 
             <Tooltip ref={tooltipRef}>
-                Email copied <Icon icon={"check"} />
+                Gönderildi <Icon icon={"check"} />
             </Tooltip>
         </Container>
     );

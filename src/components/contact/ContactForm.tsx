@@ -21,11 +21,11 @@ const Container = styled.form`
 const ContactForm = React.forwardRef<HTMLFormElement, Props>(({ handleSubmitForm }, ref) => {
   return (
     <Container ref={ref} onSubmit={handleSubmitForm}>
-      <h4 className='text-text-tertiary mb-2'>Let me know how I can help!</h4>
-      <Input id="name" name="name" placeholder="Name" />
+      <h4 className='text-text-tertiary mb-2'>Size nasıl yardım edebilirim?</h4>
+      <Input id="name" name="name" placeholder="İsim" />
       <Input id="email" name="email" type="email" placeholder="Email" />
-      <Textarea id="message" name="message" placeholder="How can I help you?" />
-      <Button fw>Send Message</Button>
+      <Textarea id="message" name="message" placeholder="Size nasıl yardım edebilirim?" />
+      <Button fw>Gönder</Button>
     </Container>
   )
 })

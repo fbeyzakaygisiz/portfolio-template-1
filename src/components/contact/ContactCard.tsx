@@ -37,8 +37,8 @@ const ContactCard = ({ mail, socials }: Props) => {
   return (
     <Container>
       <h4 className="text-text-tertiary mb-8">
-        Or contact me anywhere you want!
-      </h4>
+      İsterseniz herhangi bir platformdan bana ulaşın!
+            </h4>
       <CopyMailButton ref={copyMailButtonRef} id="copy-mail-button" mail={mail} />
       <div className="contact-socials w-full flex flex-col gap-md pt-4 border-t-separator">
         {socials?.map((social, i) => (

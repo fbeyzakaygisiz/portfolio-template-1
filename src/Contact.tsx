@@ -74,7 +74,7 @@ function Contact() {
     <Container
       id="contact"        
     >
-        <UnderlinedHeading>Contact Me</UnderlinedHeading>        
+        <UnderlinedHeading>Bana Ulaşın</UnderlinedHeading>        
         <MainContent>
            {
             !mailSent ? 

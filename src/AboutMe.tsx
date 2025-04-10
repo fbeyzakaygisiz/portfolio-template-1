@@ -26,7 +26,7 @@ export default function AboutMe() {
     const containerRef = useRef<HTMLDivElement>(null)
     return (
     <Container ref={containerRef} id={"about"}>
-            <UnderlinedHeading>About Me</UnderlinedHeading>
+            <UnderlinedHeading>Hakkımda</UnderlinedHeading>
             <AboutParagraph 
                 about={personalInfo.about}
                 scrollTrigger={`#about`}

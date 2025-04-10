@@ -31,7 +31,7 @@ function Services() {
 
   return (
     <Container id="services">
-      <UnderlinedHeading>Services</UnderlinedHeading>
+      <UnderlinedHeading>Hizmetler</UnderlinedHeading>
       <BentoGrid>
           {servicesSection.map(service => <BentoBox
             id={service.id}
