@@ -1,5 +1,5 @@
 const personalInfo = {
-  name: "Şimal Sert",
+  name: "Simal Sert",
   title: "İngilizce-Türkçe Çevirmen",
   email: "simalsert@gmail.com",
   about: "Diller ve kültürler arasındaki boşluğu kapatarak net, doğru ve bağlamsal olarak uygun çeviriler sunma konusunda uzmanım. İngilizce - Türkçe çeviri alanındaki uzmanlığımla, her projenin orijinal anlamını korurken hedef kitleyle de uyumlu olmasını sağlıyorum. Amacım, mesajınızı ister iş, ister edebi, ister kişisel kullanım için olsun; erişilebilir ve etkileyici hale getirmek. Kalite, hassasiyet ve iletişim sanatı konusunda kararlıyım.",
